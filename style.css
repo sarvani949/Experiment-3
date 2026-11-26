@@ -1,0 +1,273 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f2;
+    color: #26352b;
+}
+
+/* Navigation Bar - Flexbox */
+header {
+    background: #173f35;
+    padding: 20px 6%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #f6c453;
+    font-size: 27px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #f6c453;
+}
+
+.login {
+    background: #f6c453;
+    color: #173f35;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Banner Section */
+.banner {
+    background: linear-gradient(120deg, #dcebdc, #fff0d0);
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 42px;
+    color: #173f35;
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+}
+
+.search-box button {
+    padding: 14px 22px;
+    background: #e89b36;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Categories */
+.categories {
+    padding: 40px 6%;
+    text-align: center;
+}
+
+.categories h2,
+.restaurants h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #173f35;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category {
+    background: white;
+    padding: 16px 25px;
+    border-radius: 25px;
+    box-shadow: 0 3px 8px #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category:hover {
+    background: #173f35;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Restaurant Section */
+.restaurants {
+    padding: 40px 6%;
+    text-align: center;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* CSS Grid */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Restaurant Cards */
+.card {
+    container-type: inline-size;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.details {
+    padding: 20px;
+}
+
+.details h3 {
+    color: #173f35;
+    margin-bottom: 10px;
+}
+
+.details p {
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.details span {
+    display: block;
+    color: #d58b18;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.details button {
+    background: #173f35;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.details button:hover {
+    background: #e89b36;
+}
+
+/* Container Query */
+@container (max-width: 280px) {
+    .details {
+        padding: 12px;
+    }
+
+    .details h3 {
+        font-size: 16px;
+    }
+}
+
+/* Tablet Responsive */
+@media (max-width: 900px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-content h1 {
+        font-size: 34px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        padding: 45px 5%;
+    }
+
+    .banner-content h1 {
+        font-size: 28px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .category-list {
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+footer {
+    background: #173f35;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 2;
+    margin-top: 30px;
+}
